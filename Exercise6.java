@@ -16,12 +16,7 @@ public class Exercise6 {
 
         //otherwise, wind chill = 35.74 + 0.6215*temp - 35.75*v0.16 + 0.4275*temp*v0.16
 
-        if (v < 3) {
-            windChill = temp;
-        } else {
-            windChill = 35.74 + 0.6215 * temp - 35.75 * v * 0.16 + 0.4275 * temp * Math.pow(v, 0.16);
-        }
-        if (temp > 50) {
+        if (v < 3 || temp > 50) {
             windChill = temp;
         } else {
             windChill = 35.74 + 0.6215 * temp - 35.75 * v * 0.16 + 0.4275 * temp * Math.pow(v, 0.16);
